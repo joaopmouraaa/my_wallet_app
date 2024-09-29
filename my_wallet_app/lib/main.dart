@@ -1,43 +1,74 @@
 import 'package:flutter/material.dart';
+import 'despesas.dart'; // Importa corretamente o arquivo despesas.dart
+import 'home.dart';
+import 'login.dart';
+import 'metas.dart'; // Importa corretamente o arquivo home.dart
 
-void main() {
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
+class Menu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: MyWalletScreen(),
-    );
-  }
-}
+    // Aqui o contexto já está disponível
+    var screenWidth = MediaQuery.of(context).size.width;
+    var screenHeight = MediaQuery.of(context).size.height;
 
-class MyWalletScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text('My Wallet'),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
+      body: Center(
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'Saldo Total',
+              'MENU',
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
             SizedBox(height: 10),
-            Text(
-              'R\$ 25,000.40',
-              style: TextStyle(fontSize: 24, color: Colors.green),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => HomeScreen()),
+                );
+              },
+              child: Text('Ver Home'),
             ),
-            // Adicione mais widgets conforme o design
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => LoginScreen()),
+                );
+              },
+              child: Text('Ver Login'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => DespesasScreen()),
+                );
+              },
+              child: Text('Ver Despesas'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => MetasScreen()),
+                );
+              },
+              child: Text('Ver metas'),
+            ),
           ],
         ),
       ),
     );
   }
+}
+
+void main() {
+  runApp(MaterialApp(
+    home: Menu(),
+  ));
 }
