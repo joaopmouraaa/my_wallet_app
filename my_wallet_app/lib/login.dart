@@ -29,46 +29,46 @@ class LoginScreen extends StatelessWidget {
               const SizedBox(height: 40),
 
               // Campo de Email com tamanho fixo
-              SizedBox(
+              const SizedBox(
                 width: 150,
                 height: 40,
                 child: TextField(
                   decoration: InputDecoration(
                     labelText: 'Email',
                     labelStyle:
-                        const TextStyle(color: Colors.black), // Texto preto
+                        TextStyle(color: Colors.black), // Texto preto
                     border: OutlineInputBorder(
                       borderSide:
-                          const BorderSide(color: Colors.black), // Borda preta
+                          BorderSide(color: Colors.black), // Borda preta
                     ),
                     focusedBorder: OutlineInputBorder(
-                      borderSide: const BorderSide(
+                      borderSide: BorderSide(
                           color: Color(0xFFF1BF06)), // Borda amarela ao focar
                     ),
                   ),
-                  style: const TextStyle(
+                  style: TextStyle(
                       color: Colors.black), // Texto do campo preto
                 ),
               ),
               const SizedBox(height: 20),
 
               // Campo de Senha com tamanho fixo
-              SizedBox(
+              const SizedBox(
                 width: 150,
                 height: 40,
                 child: TextField(
                   decoration: InputDecoration(
                     labelText: 'Senha',
-                    labelStyle: const TextStyle(color: Colors.black),
+                    labelStyle: TextStyle(color: Colors.black),
                     border: OutlineInputBorder(
-                      borderSide: const BorderSide(color: Colors.black),
+                      borderSide: BorderSide(color: Colors.black),
                     ),
                     focusedBorder: OutlineInputBorder(
-                      borderSide: const BorderSide(color: Color(0xFFF1BF06)),
+                      borderSide: BorderSide(color: Color(0xFFF1BF06)),
                     ),
                   ),
                   obscureText: true,
-                  style: const TextStyle(color: Colors.black),
+                  style: TextStyle(color: Colors.black),
                 ),
               ),
               const SizedBox(height: 20),
@@ -96,7 +96,7 @@ class LoginScreen extends StatelessWidget {
 }
 
 void main() {
-  runApp(MaterialApp(
+  runApp(const MaterialApp(
     home: LoginScreen(),
   ));
 }

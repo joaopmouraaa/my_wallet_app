@@ -21,7 +21,7 @@ class DespesasScreen extends StatelessWidget {
                   value: 40,
                   title: 'Aluguel',
                   radius: 50,
-                  titleStyle: TextStyle(
+                  titleStyle: const TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
@@ -32,7 +32,7 @@ class DespesasScreen extends StatelessWidget {
                   value: 30,
                   title: 'Comida',
                   radius: 50,
-                  titleStyle: TextStyle(
+                  titleStyle: const TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
@@ -43,7 +43,7 @@ class DespesasScreen extends StatelessWidget {
                   value: 20,
                   title: 'Transporte',
                   radius: 50,
-                  titleStyle: TextStyle(
+                  titleStyle: const TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
@@ -54,7 +54,7 @@ class DespesasScreen extends StatelessWidget {
                   value: 10,
                   title: 'Outros',
                   radius: 50,
-                  titleStyle: TextStyle(
+                  titleStyle: const TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
                     color: Colors.white,

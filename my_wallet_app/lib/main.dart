@@ -5,6 +5,8 @@ import 'login.dart';
 import 'metas.dart'; // Importa corretamente o arquivo home.dart
 
 class Menu extends StatelessWidget {
+  const Menu({super.key});
+
   @override
   Widget build(BuildContext context) {
     // Aqui o contexto já está disponível
@@ -13,52 +15,52 @@ class Menu extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('My Wallet'),
+        title: const Text('My Wallet'),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
+            const Text(
               'MENU',
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             ElevatedButton(
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => HomeScreen()),
+                  MaterialPageRoute(builder: (context) => const HomeScreen()),
                 );
               },
-              child: Text('Ver Home'),
+              child: const Text('Ver Home'),
             ),
             ElevatedButton(
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => LoginScreen()),
+                  MaterialPageRoute(builder: (context) => const LoginScreen()),
                 );
               },
-              child: Text('Ver Login'),
+              child: const Text('Ver Login'),
             ),
             ElevatedButton(
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => DespesasScreen()),
+                  MaterialPageRoute(builder: (context) => const DespesasScreen()),
                 );
               },
-              child: Text('Ver Despesas'),
+              child: const Text('Ver Despesas'),
             ),
             ElevatedButton(
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => MetasScreen()),
+                  MaterialPageRoute(builder: (context) => const MetasScreen()),
                 );
               },
-              child: Text('Ver metas'),
+              child: const Text('Ver metas'),
             ),
           ],
         ),
@@ -68,7 +70,7 @@ class Menu extends StatelessWidget {
 }
 
 void main() {
-  runApp(MaterialApp(
+  runApp(const MaterialApp(
     home: Menu(),
   ));
 }

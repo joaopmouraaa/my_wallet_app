@@ -25,7 +25,7 @@ class MetasScreen extends StatelessWidget {
             buildMetaCard(
                 'Macbook Pro M1', 'R\$300 de R\$1499', 0.6, Colors.pink, 30),
             buildMetaCard(
-                'Carro', 'R\$10,000 de R\$20,000', 0.5, Colors.yellow, 30),
+                'Carro', 'R\$10,000 de R\$20,000', 0.8, Colors.yellow, 30),
             buildMetaCard(
                 'Casa', 'R\$65,000 de R\$130,500', 0.5, Colors.blue, 60),
           ],

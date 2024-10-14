@@ -24,29 +24,29 @@ class HomeScreen extends StatelessWidget {
             // Saldo Total e Receitas/Gastos
             Card(
               color: Colors.grey[100],
-              child: Padding(
-                padding: const EdgeInsets.all(16.0),
+              child: const Padding(
+                padding: EdgeInsets.all(16.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Text(
+                    Text(
                       'Saldo Total',
                       style: TextStyle(fontSize: 18, color: Colors.black),
                     ),
-                    const SizedBox(height: 8),
-                    const Text(
+                    SizedBox(height: 8),
+                    Text(
                       'R\$ 25,000.40',
                       style: TextStyle(
                           fontSize: 28,
                           fontWeight: FontWeight.bold,
                           color: Colors.green),
                     ),
-                    const SizedBox(height: 8),
+                    SizedBox(height: 8),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Column(
-                          children: const [
+                          children: [
                             Text(
                               'Gastos',
                               style: TextStyle(color: Colors.red, fontSize: 16),
@@ -56,7 +56,7 @@ class HomeScreen extends StatelessWidget {
                           ],
                         ),
                         Column(
-                          children: const [
+                          children: [
                             Text(
                               'Recebidos',
                               style:
@@ -68,14 +68,14 @@ class HomeScreen extends StatelessWidget {
                         ),
                       ],
                     ),
-                    const SizedBox(height: 8),
-                    const LinearProgressIndicator(
+                    SizedBox(height: 8),
+                    LinearProgressIndicator(
                       value: 0.5,
                       backgroundColor: Colors.grey,
                       color: Colors.green,
                     ),
-                    const SizedBox(height: 8),
-                    const Text('Meta Pessoal: R\$ 2,000.00'),
+                    SizedBox(height: 8),
+                    Text('Meta Pessoal: R\$ 2,000.00'),
                   ],
                 ),
               ),
@@ -134,6 +134,8 @@ class HomeScreen extends StatelessWidget {
           ),
         ],
       ),
+
+
     );
   }
 }
