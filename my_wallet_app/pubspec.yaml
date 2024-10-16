@@ -10,10 +10,14 @@ dependencies:
   flutter:
     sdk: flutter
 
+  intl: ^0.17.0  # Certifique-se de que a versão está correta
+
   cupertino_icons: ^1.0.8
 
   # Adicione o fl_chart aqui, dentro de dependencies
   fl_chart: ^0.35.0
+
+
 
 dev_dependencies:
   flutter_test:

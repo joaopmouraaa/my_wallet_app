@@ -3,6 +3,8 @@ import 'despesas.dart'; // Importa corretamente o arquivo despesas.dart
 import 'home.dart';
 import 'login.dart';
 import 'metas.dart'; // Importa corretamente o arquivo home.dart
+import 'gasto.dart';
+import 'profile.dart';
 
 class Menu extends StatelessWidget {
   const Menu({super.key});
@@ -30,28 +32,39 @@ class Menu extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const HomeScreen()),
-                );
-              },
-              child: const Text('Ver Home'),
-            ),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
                   MaterialPageRoute(builder: (context) => const LoginScreen()),
                 );
               },
-              child: const Text('Ver Login'),
+              child: const Text('TELA Login'),
             ),
             ElevatedButton(
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const DespesasScreen()),
+                  MaterialPageRoute(builder: (context) => const HomeScreen()),
                 );
               },
-              child: const Text('Ver Despesas'),
+              child: const Text('TELA Home'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const ProfileScreen()),
+                );
+              },
+              child: const Text('TELA Perfil'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const DespesasScreen()),
+                );
+              },
+              child: const Text('TELA Despesas'),
             ),
             ElevatedButton(
               onPressed: () {
@@ -60,7 +73,16 @@ class Menu extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => const MetasScreen()),
                 );
               },
-              child: const Text('Ver metas'),
+              child: const Text('TELA metas'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => NewExpenseScreen()),
+                );
+              },
+              child: const Text('TELA Novo Gasto'),
             ),
           ],
         ),
